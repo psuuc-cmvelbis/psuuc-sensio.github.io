@@ -191,6 +191,24 @@
     </div>
   </div>
 </section>
+  <script>
+  const sidebarItems = document.querySelectorAll('.list-group-item');
+    sidebarItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        sidebarItems.forEach((item) => {
+          item.classList.remove('active');
+        });
+        item.classList.add('active');
+      });
+    });
+    
+    const videoCards = document.querySelectorAll('.card');
+    videoCards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const videoTitle = card.querySelector('.card-title').textContent;
+        alert(`You clicked on the video: ${videoTitle}`);
+      });
+    });</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
   
 </body>

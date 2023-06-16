@@ -31,11 +31,12 @@
                      <h2>Log in to SenSio</h2>
                      <p>We are happy to have you back.</p>
                 </div>
+                <form id="loginForm">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
+                    <input type="email" id="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
                 </div>
                 <div class="input-group mb-1">
-                    <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+                    <input type="password" id="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
                 </div>
                 <div class="input-group mb-5 d-flex justify-content-between">
                     <div class="form-check">
@@ -43,23 +44,25 @@
                         <label for="formCheck" class="form-check-label text-secondary"><small>Remember Me</small></label>
                     </div>
                     <div class="forgot">
-                        <small><a href="forgot.html">Forgot Password?</a></small>
+                        <small><a href="forgot.html" class="linkk">Forgot Password?</a></small>
                     </div>
                 </div>
-                <div class="input-group mb-3">
-                    <button class="btn btn-lg btn-success w-100 fs-6" onclick="location.href='dashboard.html'">Login</button>
+                <div class="input-group mb-3" >
+                    <button class="btn btn-lg btn-success w-100 fs-6">Login</button>
                     <!-- onclick="location.href='registration.html'" -->
                 </div>
                 <div class="input-group mb-3">
                     <button class="btn btn-lg btn-light w-100 fs-6"><img src="google.png" style="width:20px" class="me-2"><small>Sign In with Google</small></button>
                 </div>
                 <div class="row">
-                    <small>Don't have account? <a href="signup.html">Sign Up</a></small>
+                    <small>Don't have account? <a href="signup.html" class="linkk">Sign Up</a></small>
                 </div>
-                
+            </form>
           </div>
        </div> 
       </div>
     </div>
+    <script src="script.js"></script>
+
 </body>
 </html>
