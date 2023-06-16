@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "dashboard.html";
       } else {
         alert(
-          "Invalid email address or password. Please try again.)"
+          "Oops! It seems like the email address or password you entered is incorrect. Give it another shot, and please make sure to use the right credentials."
         );
       }
     });
@@ -39,16 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
         password === "" ||
         repeatPassword === ""
       ) {
-        alert("Please fill in all the fields.");
+        alert("Please make sure to complete all the required fields.");
         return;
       }
 
       if (password !== repeatPassword) {
-        alert("Passwords do not match.");
+        alert("Uh-oh! The passwords you entered don't match. Please ensure that they are the same for both fields.");
         return;
       }
 
-      alert("Signup successful! Redirecting to the registration page...");
+      alert("Congratulations! Your signup is complete! You will now be redirected to the registration page.");
       window.location.href = "registration.html";
     });
 });
@@ -79,16 +79,16 @@ document.addEventListener("DOMContentLoaded", function () {
         !state ||
         !zip
       ) {
-        alert("Please fill in all the required fields.");
+        alert("Please make sure to complete all the necessary fields.");
         return;
       }
 
       if (!agreeTerms) {
-        alert("Please agree to the Terms and Conditions and Privacy Policy.");
+        alert("In order to proceed, we kindly ask you to agree to the Terms and Conditions and Privacy Policy.");
         return;
       }
 
-      alert("Registration successful! Redirecting to the dashboard...");
+      alert("Great news! Your registration is complete! You will now be redirected to the dashboard.");
       window.location.href = "dashboard.html";
     });
 });
