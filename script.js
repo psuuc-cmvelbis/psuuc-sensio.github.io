@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "dashboard.html";
       } else {
         alert(
-          "Invalid email address or password. Please try again. \n\ntry this(  user@gmail.com | password )"
+          "Invalid email address or password. Please try again.)"
         );
       }
     });
