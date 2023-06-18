@@ -1,0 +1,56 @@
+
+body {
+  background-color: #FFFFFF;
+  color: #1DB954;
+  font-family: 'Poppins', sans-serif;
+  background-image: linear-gradient(rgba(4,9,30,0.8),rgba(4,9,30,0.8)),url(bg3.png);
+
+}
+.container{
+    background-color: #FFFFFF;
+}
+.navbar {
+  background-color: #FFFFFF;
+}
+
+.navbar-brand {
+  color: #1DB954;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #1DB954;
+}
+
+.list-group-item {
+  background-color: #FFFFFF;
+  border-color: #1DB954;
+  color: #1DB954;
+}
+
+.list-group-item.active {
+  background-color: #1DB954;
+  border-color: #1DB954;
+}
+
+h2, p {
+  color: #1DB954;
+}
+.chart-container {
+display: flex;
+align-items: flex-end;
+height: 200px;
+}
+
+.bar {
+width: 20px;
+background-color: #1DB954;
+margin-right: 5px;
+}
+
+.chart-labels {
+display: flex;
+justify-content: space-between;
+margin-top: 10px;
+}
+
