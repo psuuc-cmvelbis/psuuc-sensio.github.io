@@ -49,9 +49,11 @@
                     <button class="btn btn-lg btn-success w-100 fs-6" >Register</button>
                 </div>
             </form>
+            <form id="google">
                 <div class="input-group mb-3">
-                    <button class="btn btn-lg btn-light w-100 fs-6" onclick="location.href='registration.html'"><img src="google.png" style="width:20px" class="me-2"><small>Sign Up with Google</small></button>
+                    <button class="btn btn-lg btn-light w-100 fs-6" onclick="loginWithGoogle()"  ><img src="google.png" style="width:20px" class="me-2"><small>Sign Up with Google</small></button>
                 </div>
+            </form>
                 <div class="row">
                     <small>Already have an account? <a href="login.html" class="linkk">Log In</a></small>
                 </div>
@@ -60,5 +62,14 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        function loginWithGoogle() {
+            event.preventDefault();
+            alert("Congratulations! Your signup is complete! You will now be redirected to the registration page.");
+            window.location.href = "registration.html";
+        }
+        
+
+    </script>
 </body>
 </html>

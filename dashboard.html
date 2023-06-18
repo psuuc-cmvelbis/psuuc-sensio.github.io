@@ -61,8 +61,10 @@
       </div>
       <div class="col-lg-9">
         <!-- Content -->
+        <div id="introSection" class="card mt-4" style="display: block;">
         <h2>Welcome to your Sensio Dashboard</h2>
         <p>Welcome to your captivating Sensio dashboard where you can freely share your thoughts, ideas, and updates, just remember to express them in English for universal understanding.        </p>
+      </div>
         <div class="card mt-4 mb-5 " id="graphSection" style="display: block;">
             <div class="card-header">
               Website Usage in a Week
@@ -216,6 +218,8 @@
 <script>
   function showGraph() {
     document.getElementById("graphSection").style.display = "block";
+    document.getElementById("introSection").style.display = "block";
+    
     document.getElementById("musicSection").style.display = "block";
     document.getElementById("videosSection").style.display = "block";
     document.getElementById("playlistSection").style.display = "block";
@@ -227,6 +231,7 @@
     document.getElementById("videosSection").style.display = "none";
     document.getElementById("graphSection").style.display = "none";
     document.getElementById("playlistSection").style.display = "none";
+    document.getElementById("introSection").style.display = "none";
   }
 
   function showVideos() {
@@ -234,12 +239,14 @@
     document.getElementById("videosSection").style.display = "block";
     document.getElementById("graphSection").style.display = "none";
     document.getElementById("playlistSection").style.display = "none";
+    document.getElementById("introSection").style.display = "none";
   }
   function showPlaylist() {
     document.getElementById("graphSection").style.display = "none";
     document.getElementById("musicSection").style.display = "none";
     document.getElementById("videosSection").style.display = "none";
     document.getElementById("playlistSection").style.display = "block";
+    document.getElementById("introSection").style.display = "none";
 
   }
 </script>

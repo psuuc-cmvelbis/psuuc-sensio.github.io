@@ -52,9 +52,12 @@
                     <!-- onclick="location.href='registration.html'" -->
                 </div>
             </form>
+
+            <form id="google">
                 <div class="input-group mb-3">
-                    <button class="btn btn-lg btn-light w-100 fs-6" onclick="location.href='dashboard.html'"><img src="google.png" style="width:20px" class="me-2"><small>Sign In with Google</small></button>
+                    <button class="btn btn-lg btn-light w-100 fs-6" onclick="loginWithGoogle()"  ><img src="google.png" style="width:20px" class="me-2"><small>Sign In with Google</small></button>
                 </div>
+            </form>
                 <div class="row">
                     <small>Don't have account? <a href="signup.html" class="linkk">Sign Up</a></small>
                 </div>
@@ -64,6 +67,14 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        function loginWithGoogle() {
+            event.preventDefault();
+            alert("Login successful! Redirecting to the dashboard...");
+            window.location.href = "dashboard.html";
+        }
+        
 
+    </script>
 </body>
 </html>

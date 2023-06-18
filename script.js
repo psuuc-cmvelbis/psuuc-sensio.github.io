@@ -115,3 +115,26 @@ document.addEventListener("DOMContentLoaded", function () {
  
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("google").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    var email = document.querySelector("#header input[type='email']").value;
+
+    if (!email) {
+      alert("Please enter your email address.");
+      return;
+    }
+    if (email == "user@gmail.com") {
+      alert("An email for password recovery has been sent to "+email + 
+      ". Please check your inbox for further instructions." );
+      return;
+    }
+    
+    if (email != "user@gmail.com") {
+      alert("Apologies for the confusion. It appears that there is no email associated with that account. Please verify the email address you provided during sign-up.");
+      return;
+    }
+ 
+  });
+});
