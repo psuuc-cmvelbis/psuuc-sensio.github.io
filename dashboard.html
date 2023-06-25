@@ -92,49 +92,45 @@
               </div>
             </div>
           </div>
-          <div class="card mt-4" id="musicSection" style="display: block;">
-            <div class="card-header">
-              Recently Played Songs
-            </div>
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">Toni Fowler - MPL</li>
-                <li class="list-group-item">
-                  <audio controls class="audio-player">
-                    <source src="m1.m4a" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                  </audio>
-                </li>
-                <li class="list-group-item">Toni Fowler - M.N.M (feat. Freshbreed)</li>
-                <li class="list-group-item">
-                  <audio controls class="audio-player">
-                    <source src="m2.m4a" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                  </audio>
-                </li>
-                <li class="list-group-item">Air Supply - How Deep Is Your Love</li>
-                <li class="list-group-item">
-                  <audio controls class="audio-player">
-                    <source src="howdeep.webm" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                  </audio>
-                </li>
-                <li class="list-group-item">Air Supply - Here I Am</li>
-                <li class="list-group-item">
-                  <audio controls class="audio-player">
-                    <source src="hereiam.webm" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                  </audio>
-                </li>
-                <li class="list-group-item">Zack Tabudlo - Gusto ft. Al James</li>
-                <li class="list-group-item">
-                  <audio controls class="audio-player">
-                    <source src="song2.m4a" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                  </audio>
-                </li>
-              </ul>
-            </div>
+          <div id="musicSection" style="display: block;">
+            <h2>Music Section</h2>
+            <ul class="list-group">
+              <li class="list-group-item">Toni Fowler - M.N.M (feat. Freshbreed)</li>
+              <li class="list-group-item">
+                <audio controls class="audio-player">
+                  <source src="m2.m4a" type="audio/mpeg">
+                  Your browser does not support the audio tag.
+                </audio>
+              </li>
+              <button onclick="addToPlaylist('Toni Fowler - M.N.M (feat. Freshbreed)', 'm2.m4a')">Add to Playlist</button>
+    
+              <li class="list-group-item">Air Supply - How Deep Is Your Love</li>
+              <li class="list-group-item">
+                <audio controls class="audio-player">
+                  <source src="howdeep.webm" type="audio/mpeg">
+                  Your browser does not support the audio tag.
+                </audio>
+              </li>
+              <button onclick="addToPlaylist('Air Supply - How Deep Is Your Love', 'howdeep.webm')">Add to Playlist</button>
+    
+              <li class="list-group-item">Air Supply - Here I Am</li>
+              <li class="list-group-item">
+                <audio controls class="audio-player">
+                  <source src="hereiam.webm" type="audio/mpeg">
+                  Your browser does not support the audio tag.
+                </audio>
+              </li>
+              <button onclick="addToPlaylist('Air Supply - Here I Am', 'hereiam.webm')">Add to Playlist</button>
+    
+              <li class="list-group-item">Zack Tabudlo - Gusto ft. Al James</li>
+              <li class="list-group-item">
+                <audio controls class="audio-player">
+                  <source src="song2.m4a" type="audio/mpeg">
+                  Your browser does not support the audio tag.
+                </audio>
+              </li>
+              <button onclick="addToPlaylist('Zack Tabudlo - Gusto ft. Al James', 'song2.m4a')">Add to Playlist</button>
+            </ul>
           </div>
 
         <div class="card mt-4" id="videosSection" style="display: block;">
@@ -145,9 +141,9 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="card">
-                  <div id="myFrameContainer">
                       <iframe id="myFrame" src="https://www.youtube.com/embed/D8IDN4evSBg" frameborder="0" height="315" scrolling="no" width="100%"></iframe>
-                    </div>
+                      <button onclick="addToPlaylist('UMALIS NA TATAY NI TYRONIA', 'https://www.youtube.com/embed/D8IDN4evSBg')">Add to Playlist</button>
+
 
                   <div class="card-body">
                     <h5 class="card-title">UMALIS NA TATAY NI TYRONIA</h5>
@@ -158,6 +154,7 @@
               <div class="col-md-6">
                 <div class="card">
                   <iframe id="myFrame" src="https://www.youtube.com/embed/_7B5WPKoTSs" frameborder="0" height="315" scrolling="no" width="100%"></iframe>
+                  <button onclick="addToPlaylist('VLOG 354 HAPPY BIRTHDAY ATE KONG MATABA NA BUNGANGERA', 'https://www.youtube.com/embed/_7B5WPKoTSs')">Add to Playlist</button>
                   
                   <div class="card-body">
                     <h5 class="card-title">VLOG 354 BIRTHDAY ATE MARI</h5>
@@ -255,7 +252,6 @@
   function showGraph() {
     document.getElementById("graphSection").style.display = "block";
     document.getElementById("introSection").style.display = "block";
-    
     document.getElementById("musicSection").style.display = "block";
     document.getElementById("videosSection").style.display = "block";
     document.getElementById("playlistSection").style.display = "block";
@@ -286,6 +282,75 @@
     
 
   }
+  function addToPlaylist(title, url) {
+  var playlist = document.getElementById("playlistSection").querySelector("ul.list-group");
+  
+  var listItem = document.createElement("li");
+  listItem.className = "list-group-item";
+  listItem.style.marginBottom = "10px"; 
+  
+  var media = document.createElement("div");
+  media.className = "media";
+  
+  if (url.includes("youtube.com")) {
+    var responsiveIframe = document.createElement("div");
+    responsiveIframe.className = "responsive-iframe";
+    
+    var iframe = document.createElement("iframe");
+    iframe.src = url;
+    iframe.frameborder = "0";
+    iframe.height = "315";
+    iframe.scrolling = "no";
+    iframe.width = "100%";
+    
+    responsiveIframe.appendChild(iframe);
+    media.appendChild(responsiveIframe);
+  }
+  else {
+    var mediaBody = document.createElement("div");
+    mediaBody.className = "media-body";
+    
+    var titleElement = document.createElement("h5");
+    titleElement.className = "mt-0";
+    titleElement.textContent = title;
+    
+    var audioContainer = document.createElement("div"); 
+    audioContainer.style.marginTop = "10px"; 
+    
+    var audio = document.createElement("audio");
+    audio.controls = true;
+    audio.style.width = "100%";
+    
+    var source = document.createElement("source");
+    source.src = url;
+    source.type = "audio/mpeg";
+    
+    var unsupportedText = document.createTextNode("Your browser does not support the audio tag.");
+    
+    audio.appendChild(source);
+    audio.appendChild(unsupportedText);
+    
+    audioContainer.appendChild(audio);
+    
+    mediaBody.appendChild(titleElement);
+    mediaBody.appendChild(audioContainer); 
+    
+    media.appendChild(mediaBody);
+  }
+  
+  var removeButton = document.createElement("button");
+  removeButton.textContent = "Remove from Playlist";
+  removeButton.className = "btn btn-danger btn-sm"; 
+  removeButton.style.marginTop = "10px"; 
+  
+  removeButton.onclick = function() {
+    listItem.remove();
+  };
+  
+  listItem.appendChild(media);
+  listItem.appendChild(removeButton);
+  playlist.appendChild(listItem);
+}
 
 </script>
 
