@@ -41,6 +41,7 @@
           <li class="nav-item">
             <a class="nav-link" href="login.html">Logout</a>
           </li>
+
         </ul>
       </div>
     </div>
@@ -57,11 +58,12 @@
           <a href="#" class="list-group-item list-group-item-action" onclick="showVideos()">Videos</a>
           <a href="#" class="list-group-item list-group-item-action" onclick="showPlaylist()">Playlists</a>
 
+
         </div>
       </div>
       <div class="col-lg-9">
         <!-- Content -->
-        <div id="introSection" class="card mt-4" style="display: block;">
+        <div id="introSection" class="card mt-4" style="display: block; border: none;">
         <h2>Welcome to your Sensio Dashboard</h2>
         <p>Welcome to your captivating Sensio dashboard where you can freely share your thoughts, ideas, and updates, just remember to express them in English for universal understanding.        </p>
       </div>
@@ -90,40 +92,50 @@
               </div>
             </div>
           </div>
-        <div class="card mt-4" id="musicSection" style="display: block;">
-          <div class="card-header">
-            Recently Played Songs
+          <div class="card mt-4" id="musicSection" style="display: block;">
+            <div class="card-header">
+              Recently Played Songs
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item">Toni Fowler - MPL</li>
+                <li class="list-group-item">
+                  <audio controls class="audio-player">
+                    <source src="m1.m4a" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                  </audio>
+                </li>
+                <li class="list-group-item">Toni Fowler - M.N.M (feat. Freshbreed)</li>
+                <li class="list-group-item">
+                  <audio controls class="audio-player">
+                    <source src="m2.m4a" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                  </audio>
+                </li>
+                <li class="list-group-item">Air Supply - How Deep Is Your Love</li>
+                <li class="list-group-item">
+                  <audio controls class="audio-player">
+                    <source src="howdeep.webm" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                  </audio>
+                </li>
+                <li class="list-group-item">Air Supply - Here I Am</li>
+                <li class="list-group-item">
+                  <audio controls class="audio-player">
+                    <source src="hereiam.webm" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                  </audio>
+                </li>
+                <li class="list-group-item">Zack Tabudlo - Gusto ft. Al James</li>
+                <li class="list-group-item">
+                  <audio controls class="audio-player">
+                    <source src="song2.m4a" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                  </audio>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="card-body">
-            <ul class="list-group">
-              <li class="list-group-item">Toni Fowler - MPL</li>
-              <li class="list-group-item"><audio controls >
-                <source src="m1.m4a" type="audio/mpeg">
-                Your browser does not support the audio tag.
-              </audio></li>
-              <li class="list-group-item">Toni Fowler - M.N.M (feat. Freshbreed)</li>
-              <li class="list-group-item"><audio controls >
-                <source src="m2.m4a" type="audio/mpeg">
-                Your browser does not support the audio tag.
-              </audio></li>
-              <li class="list-group-item">Air Supply - How deep is your love</li>
-              <li class="list-group-item"><audio controls >
-                <source src="howdeep.webm" type="audio/mpeg">
-                Your browser does not support the audio tag.
-              </audio></li>
-              <li class="list-group-item">Air Supply - Here I am</li>
-              <li class="list-group-item"><audio controls >
-                <source src="hereiam.webm" type="audio/mpeg">
-                Your browser does not support the audio tag.
-              </audio></li>
-              <li class="list-group-item">Zack Tabudlo - Gusto ft. Al James</li>
-              <li class="list-group-item"><audio controls >
-                <source src="song2.m4a" type="audio/mpeg">
-                Your browser does not support the audio tag.
-              </audio></li>
-            </ul>
-          </div>
-        </div>
 
         <div class="card mt-4" id="videosSection" style="display: block;">
           <div class="card-header">
@@ -158,57 +170,81 @@
           </div>
         </div>
         <div id="playlistSection" class="card mt-4" style="display: block;">
-            <div class="card-header">
-              My Playlist
-            </div>
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <div class="media">
-                    <img src="song1.webp" class="mr-3" alt="Song 1">
-                    <div class="media-body">
-                      <h5 class="mt-0">Migos - Walk It Talk It ft. Drake</h5>
-                      <audio controls>
-                        <source src="song1.m4a" type="audio/mpeg">
-                        Your browser does not support the audio tag.
-                      </audio>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="media">
-                    <iframe id="myFrame" src="https://www.youtube.com/embed/ZamgJENHG4k" frameborder="0" height="315" scrolling="no" width="100%"></iframe>
-                    <div class="media-body">
-                      <h5 class="mt-0">O $IDE MAFIA</h5>
-                      <p>20 DEEP Prod. BRGR (Official Music Video)</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="media">
-                    <img src="song2.webp" class="mr-3" alt="Song 2">
-                    <div class="media-body">
-                      <h5 class="mt-0">Zack Tabudlo - Gusto ft. Al James</h5>
-                      <<audio controls>
-                        <source src="song2.m4a" type="audio/mpeg">
-                        Your browser does not support the audio tag.
-                      </audio>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="media">
-                    <iframe id="myFrame" src="https://www.youtube.com/embed/ZIjSBS5GcIY" frameborder="0" height="315" scrolling="no" width="100%"></iframe>
-                    <div class="media-body">
-                      <h5 class="mt-0">MANILA GREY</h5>
-                      <p>Timezones (Official Music Video)</p>
-
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+          <div class="card-header">
+            My Playlist
           </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="media">
+                  <div class="media-body">
+                    <h5 class="mt-0">Migos - Walk It Talk It ft. Drake</h5>
+                    <audio controls class="audio-player">
+                      <source src="song1.m4a" type="audio/mpeg">
+                      Your browser does not support the audio tag.
+                    </audio>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="media">
+                  <div class="responsive-iframe">
+                    <iframe id="myFrame" src="https://www.youtube.com/embed/ZamgJENHG4k" frameborder="0" height="315" scrolling="no" width="100%"></iframe>
+                  </div>
+                  <div class="media-body">
+                    <h5 class="mt-0">O $IDE MAFIA</h5>
+                    <p>20 DEEP Prod. BRGR (Official Music Video)</p>
+                  </div>
+                </div>
+              </li>
+              
+              <li class="list-group-item">
+                <div class="media">
+                  <div class="media-body">
+                    <h5 class="mt-0">Zack Tabudlo - Gusto ft. Al James</h5>
+                    <audio controls class="audio-player">
+                      <source src="song2.m4a" type="audio/mpeg">
+                      Your browser does not support the audio tag.
+                    </audio>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="media">
+                  <div class="responsive-iframe">
+                    <iframe id="myFrame" src="https://www.youtube.com/embed/ZIjSBS5GcIY" frameborder="0" height="315" scrolling="no" width="100%"></iframe>
+                  </div>
+                  <div class="media-body">
+                    <h5 class="mt-0">MANILA GREY</h5>
+                    <p>Timezones (Official Music Video)</p>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="media">
+                  <div class="media-body">
+                    <h5 class="mt-0">Air Supply - How Deep Is Your Love</h5>
+                    <audio controls class="audio-player">
+                      <source src="howdeep.webm" type="audio/mpeg">
+                      Your browser does not support the audio tag.
+                    </audio>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="media">
+                  <div class="responsive-iframe">
+                    <iframe id="myFrame" src="https://www.youtube.com/embed/hxl73VEZ21I" frameborder="0" height="315" scrolling="no" width="100%"></iframe>
+                  </div>
+                  <div class="media-body">
+                    <h5 class="mt-0">Up Dharma Down</h5>
+                    <p>Tadhana + Oo</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
         
       </div>
     </div>
@@ -247,8 +283,10 @@
     document.getElementById("videosSection").style.display = "none";
     document.getElementById("playlistSection").style.display = "block";
     document.getElementById("introSection").style.display = "none";
+    
 
   }
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
